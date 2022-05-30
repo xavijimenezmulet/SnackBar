@@ -14,7 +14,7 @@
 
 This library is used to control an attribute if it comes to null, what it will do is remove that null and give it a default value. Ideal for dealing with business models where attributes can be nullable.
 
-<img src="[/images/output/video1.gif](https://user-images.githubusercontent.com/44567433/171025845-bd0b31e8-0db8-49a3-b845-09c5cd6157ff.gif)" width="250" height="250"/>
+<img src="[/images/output/video1.gif](https://user-images.githubusercontent.com/44567433/171025845-bd0b31e8-0db8-49a3-b845-09c5cd6157ff.gif)" width="250" height="500"/>
 
 ![succes1](https://user-images.githubusercontent.com/44567433/171025845-bd0b31e8-0db8-49a3-b845-09c5cd6157ff.gif)
 ![success2](https://user-images.githubusercontent.com/44567433/171025872-c6ea89c2-3575-4fb0-9659-497cf83d16c6.gif)
