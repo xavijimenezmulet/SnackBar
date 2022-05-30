@@ -56,49 +56,100 @@ dependencies {
 
 ## 💻Usage
 
-If you have a class where null attributes can come. The library helps prevent them in a single line without having to check them.
-Let's add an example class:
+Two types of snack bar can be used. By type or custom:
+
+# Type
+
+These are the existing types:
 
 ```kotlin
-data class Example(
-    val byte: Byte?,
-    val short: Short?,
-    val int: Int?,
-    val long: Long?,
-    val float: Float?,
-    val double: Double?,
-    val char: Char?,
-    val string: String?,
-    val boolean: Boolean?,
-    val list: List<String>?,
-    val mutableList: MutableList<String>?,
-    val array: Array<String>?
+enum class Type {
+ SUCCESS, FAILURE, WARNING, INFORMATION
+}
+```
+
+You should call this method from StyleableSnackBar:
+
+
+```kotlin
+/**
+ * Creates a snackBar instance with custom duration and color
+ * @param viewGroup view group of the caller
+ * @param text to be used as the message
+ * @param type specifies the image and background to be prompted
+ * @param long duration of snackBar false if you want short
+ * @param context current context
+ * @param showImage to show image (optional) default is true
+*/
+fun snack(
+ viewGroup: ViewGroup,
+ text: String?,
+ type: Type,
+ long: Boolean,
+ context: Context,
+ showImage: Boolean = true
 )
 ```
 
-Now we are going to show an example of an extension, for example of string:
+Now we are going to show an example of snack bar setting to FAILURE with image:
 
 ```kotlin
-fun String?.saveNull(defaultValue: String = ""): String {
-    return this ?: defaultValue
-}
+StyleableSnackBar.snack(
+ requireActivity().window.decorView.rootView as ViewGroup,
+ "Custom Snack Bar",
+ StyleableSnackBar.Type.FAILURE,
+ true,
+ requireContext()
+)
 ```
 
-If we look at the extension it controls that a string can be nullable. If the string is not nullable, it returns the attribute itself. But on the contrary, if it is nullable, it will return the default value (By default it will be empty string).
-All extensions have a default value that we can modify to our liking if we want.
+This will show a failure snack bar with failure icon (you can look on presentation gifts).
 
-Now let's show an example with the "Example" class:
+# Custom
+You should call this method from StyleableSnackBar:
 
 ```kotlin
-private fun initExample() {
-  val example = Example()
-  val text: String = example.string.saveNull("No available")
-  textView.text = text
-}
+/**
+ * Creates a custom snackbar with the selected elements
+ * @param viewGroup view group of the caller
+ * @param text to be used as the message
+ * @param backgroundColor the snackBar background color
+ * @param image image to be used in the snackBar (optional)
+ * @param tintImage color of image set (optional)
+ * @param long duration of snackBar false if you want short
+ * @param strokeColor the outline color (optional)
+ * @param strokeWidth the outline width (optional)
+*/
+fun customSnack(
+            viewGroup: ViewGroup,
+            text: String?,
+            backgroundColor: Int = R.color.black,
+            image: Int? = null,
+            tintImage: Int = R.color.white,
+            long: Boolean,
+            strokeWidth: Int = 0,
+            strokeColor: Int = R.color.black,
+            context: Context
+)
 ```
 
-The value of "text" will always have a value. It can be the string attribute of the Example class if it is not null.
-If it is, we have added a default value that says "not available" so the textView will always show a result.
+Now we are going to show an example of custom snack bar:
+
+```kotlin
+StyleableSnackBar.customSnack(
+ requireActivity().window.decorView.rootView as ViewGroup,
+ "Custom Snack Bar",
+ R.color.purple_500,
+ R.drawable.ic_launcher_foreground,
+ R.color.white,
+ true,
+ 2,
+ R.color.styleableYellow,
+ requireContext()
+)
+```
+
+You can download the code and try the example as shown in the presentation part.
 
 
 # ✔️Changelog
