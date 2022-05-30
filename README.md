@@ -82,12 +82,12 @@ You should call this method from StyleableSnackBar:
  * @param showImage to show image (optional) default is true
 */
 fun snack(
- viewGroup: ViewGroup,
- text: String?,
- type: Type,
- long: Boolean,
- context: Context,
- showImage: Boolean = true
+	 viewGroup: ViewGroup,
+	 text: String?,
+	 type: Type,
+	 long: Boolean,
+	 context: Context,
+	 showImage: Boolean = true
 )
 ```
 
@@ -95,11 +95,11 @@ Now we are going to show an example of snack bar setting to FAILURE with image:
 
 ```kotlin
 StyleableSnackBar.snack(
- requireActivity().window.decorView.rootView as ViewGroup,
- "Custom Snack Bar",
- StyleableSnackBar.Type.FAILURE,
- true,
- requireContext()
+	 requireActivity().window.decorView.rootView as ViewGroup,
+	 "Custom Snack Bar",
+	 StyleableSnackBar.Type.FAILURE,
+	 true,
+	 requireContext()
 )
 ```
 
@@ -137,15 +137,15 @@ Now we are going to show an example of custom snack bar:
 
 ```kotlin
 StyleableSnackBar.customSnack(
- requireActivity().window.decorView.rootView as ViewGroup,
- "Custom Snack Bar",
- R.color.purple_500,
- R.drawable.ic_launcher_foreground,
- R.color.white,
- true,
- 2,
- R.color.styleableYellow,
- requireContext()
+	 requireActivity().window.decorView.rootView as ViewGroup,
+	 "Custom Snack Bar",
+	 R.color.purple_500,
+	 R.drawable.ic_launcher_foreground,
+	 R.color.white,
+	 true,
+	 2,
+	 R.color.styleableYellow,
+	 requireContext()
 )
 ```
 
