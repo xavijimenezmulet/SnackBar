@@ -10,8 +10,21 @@
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/xavijimenez)
 
+## 💥Presentation
 
 This library is used to control an attribute if it comes to null, what it will do is remove that null and give it a default value. Ideal for dealing with business models where attributes can be nullable.
+
+![succes1](https://user-images.githubusercontent.com/44567433/171025845-bd0b31e8-0db8-49a3-b845-09c5cd6157ff.gif)
+![success2](https://user-images.githubusercontent.com/44567433/171025872-c6ea89c2-3575-4fb0-9659-497cf83d16c6.gif)
+![failure1](https://user-images.githubusercontent.com/44567433/171025901-747838f2-9033-4f0d-a3f2-9795084cd1df.gif)
+![failure2](https://user-images.githubusercontent.com/44567433/171025910-c56b8c51-14e2-4af5-b616-f4f0ad145736.gif)
+![warning1](https://user-images.githubusercontent.com/44567433/171025941-54d0dbe8-4e2f-437e-8d0b-d6f8b2917452.gif)
+![warning2](https://user-images.githubusercontent.com/44567433/171025945-94ae37d7-e16b-4fb4-8e9b-d18732a8a852.gif)
+![info1](https://user-images.githubusercontent.com/44567433/171025961-f59d5ace-5087-480e-a3af-2a7e62c2d390.gif)
+![info2](https://user-images.githubusercontent.com/44567433/171025964-03810705-123f-4fb8-9af9-adb9350b9b2a.gif)
+![custom1](https://user-images.githubusercontent.com/44567433/171025998-e0fb8433-1957-47ed-93c6-dcfd4cb26e20.gif)
+![custom2](https://user-images.githubusercontent.com/44567433/171026010-e4d989a8-b8ed-4ae1-802d-4ef31e28bf1f.gif)
+
 
 ## 💥Installation
 
