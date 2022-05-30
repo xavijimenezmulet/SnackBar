@@ -50,10 +50,14 @@ class StyleableSnackBar(
 
         /**
          * Creates a custom snackbar with the selected elements
-         * @param viewGroup view of the caller
+         * @param viewGroup view group of the caller
          * @param text to be used as the message
-         * @param image resource to be used in the snackBar
-         * @return a snackBar component instance
+         * @param backgroundColor the snackBar background color
+         * @param image image to be used in the snackBar (optional)
+         * @param tintImage color of image set (optional)
+         * @param long duration of snackBar false if you want short
+         * @param strokeColor the outline color (optional)
+         * @param strokeWidth the outline width (optional)
          */
         fun customSnack(
             viewGroup: ViewGroup,
@@ -99,11 +103,12 @@ class StyleableSnackBar(
 
         /**
          * Creates a snackBar instance with custom duration and color
-         * @param viewGroup view of the caller
+         * @param viewGroup view group of the caller
          * @param text to be used as the message
-         * @param type specifies the image to be prompted
-         * @param long makes the snackBar appear longer time
-         * @return a snackBar component instance
+         * @param type specifies the image and background to be prompted
+         * @param long duration of snackBar false if you want short
+         * @param context current context
+         * @param showImage to show image (optional) default is true
          */
         fun snack(
             viewGroup: ViewGroup,
