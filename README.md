@@ -50,7 +50,7 @@ Step 2. Add the dependency:
 
 ```bash
 dependencies {
-	implementation "com.github.xavijimenezmulet:StyleableSnackBar:$latest_version"
+	implementation "com.github.xavijimenezmulet:SnackBar:$latest_version"
 }
 ```
 
